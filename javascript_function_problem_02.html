@@ -1,7 +1,9 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8"> 
     <script type="text/javascript">
+
         var A_mid = 10;
         var A_end = 8;
         var B_mid = 1;
@@ -9,101 +11,23 @@
         var C_mid = 9;
         var C_end = 5;
 
-        // A 학생 출력
-        var result = "";
-        for (var i = 0; i < A_mid; ++i) {
-            result += "*";
-        }
-
-        for (var i = 0; i < 10 - A_mid; ++i) {
-            result += "_";
-        }
-
-        result += " + ";
-
-        for (var i = 0; i < A_end; ++i) {
-            result += "*";
-        }
-
-        for (var i = 0; i < 10 - A_end; ++i) {
-            result += "_";
-        }
-
-        result += " = ";
-
-        for (var i = 0; i < A_mid + A_end; ++i) {
-            result += "*";
-        }
-
-        for (var i = 0; i < 20 - (A_mid + A_end); ++i) {
-            result += "_";
-        }
-
-        console.log("A : " + result);
-
-        // B  학생 출력
-        result = "";
-        for (var i = 0; i < B_mid; ++i) {
-            result += "*";
-        }
-
-        for (var i = 0; i < 10 - B_mid; ++i) {
-            result += "_";
-        }
-
-        result += " + ";
-
-        for (var i = 0; i < B_end; ++i) {
-            result += "*";
-        }
-
-        for (var i = 0; i < 10 - B_end; ++i) {
-            result += "_";
-        }
-
-        result += " = ";
-
-        for (var i = 0; i < B_mid + B_end; ++i) {
-            result += "*";
-        }
-
-        for (var i = 0; i < 20 - (B_mid + B_end); ++i) {
-            result += "_";
-        }
-
-        console.log("B : " + result);
-
-        // C 학생 출력
-        result = "";
-        for (var i = 0; i < C_mid; ++i) {
-            result += "*";
-        }
-
-        for (var i = 0; i < 10 -C_mid; ++i) {
-            result += "_";
-        }
-
-        result += " + ";
-
-        for (var i = 0; i < C_end; ++i) {
-            result += "*";
-        }
-
-        for (var i = 0; i < 10 - C_end; ++i) {
-            result += "_";
-        }
-
-        result += " = ";
-
-        for (var i = 0; i < C_mid + C_end; ++i) {
-            result += "*";
-        }
-
-        for (var i = 0; i < 20 - (C_mid + C_end); ++i) {
-            result += "_";
-        }
-
-        console.log("C : " + result);
+		function fnc_1(a,b){
+			var result = "",tmp=10;
+			if(b>0){
+			tmp=20;
+			a=a+b;
+			}
+			for(var i = tmp-a;i < tmp;i++){
+				result += "*";
+			}
+			for(var i = 0;i < tmp-a;i++){
+				result += "_";
+			}
+			return result;
+		}
+		console.log("A : " + fnc_1(A_mid) + " + " + fnc_1(A_end)+" = "+fnc_1(A_mid,A_end));
+		console.log("B : " + fnc_1(B_mid) + " + " + fnc_1(B_end)+" = "+fnc_1(B_mid,B_end));
+		console.log("C : " + fnc_1(C_mid) + " + " + fnc_1(C_end)+" = "+fnc_1(C_mid,C_end));
     </script>
 </head>
 <body>
